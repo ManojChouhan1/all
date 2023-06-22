@@ -1,9 +1,4 @@
-
-
-exports.handler = async (event, context) => {
-    // Your API logic goes here
-
-    const express = require("express");
+ const express = require("express");
     require("./db/config");
     const cors = require("cors");
 
@@ -346,10 +341,3 @@ exports.handler = async (event, context) => {
 
     // End api logic
 
-
-    const response = {
-        statusCode: 200,
-        body: JSON.stringify({ message: 'Hello, World!' }),
-    };
-    return response;
-};

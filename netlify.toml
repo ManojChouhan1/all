@@ -1,9 +1,0 @@
-[build]
-functions = "functions"
-
-[[functions]]
-path = "/*"
-memory = 128
-
-[build.environment]
-NODE_VERSION = "14"
