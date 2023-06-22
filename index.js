@@ -1,6 +1,7 @@
  const express = require("express");
     require("./db/config");
     const cors = require("cors");
+    
 
     const Jwt = require("jsonwebtoken");
     const jwtkey = "man-ors";
@@ -10,6 +11,8 @@
     const College = require("./db/College")
     const Student = require("./db/Student");
     const Marksheet = require("./db/Marksheet");
+
+    const port =process.env.PORT || 5000;
 
     const app = express();
     app.use(express.json());
@@ -335,7 +338,7 @@
             resp.status(403).send({ result: "please add tokem with headers" })
         }
     }
-    app.listen(5000, () => {
+    app.listen(port, () => {
         console.log("run on http://localhost:5000")
     })
 
