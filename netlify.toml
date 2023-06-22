@@ -1,0 +1,9 @@
+[build]
+functions = "functions"
+
+[[functions]]
+path = "/api/*"
+memory = 128
+
+[build.environment]
+NODE_VERSION = "14"
